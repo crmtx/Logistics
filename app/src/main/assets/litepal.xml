@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="Logistics" ></dbname>
+
+    <version value="1" ></version>
+
+    <list>
+        <mapping class = "com.logistics.android.db.User"></mapping>
+        <mapping class = "com.logistics.android.db.Waybill"></mapping>
+    </list>
+</litepal>
