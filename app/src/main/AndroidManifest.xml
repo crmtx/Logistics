@@ -10,15 +10,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        <activity android:name=".user.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".user.RegisterActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".user.SetupActivity" />
+        <activity android:name=".user.ModifyActivity" />
+        <activity android:name=".enter.EnterActivity" />
+        <activity android:name=".allocate.AllocateActivity" />
+        <activity android:name=".allocate.CarAddActivity" />
+        <activity android:name=".allocate.CarUpdateActivity" />
+        <activity android:name=".send.SendActivity" />
+        <activity android:name=".send.CarControlActivity" />
+        <activity android:name=".send.WaybillAddActivity" />
+        <activity android:name=".send.WaybillControlActivity" />
+        <activity android:name=".reach.ReachActivity" />
+        <activity android:name=".take.TakeActivity" />
+        <activity android:name=".reach.ReachCarActivity" />
+        <activity android:name=".reach.UnloadActivity" />
+        <activity android:name=".reach.UnloadControlActivity" />
+        <activity android:name=".take.TakeControlActivity"></activity>
     </application>
 
 </manifest>

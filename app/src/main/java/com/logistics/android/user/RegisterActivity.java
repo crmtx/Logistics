@@ -1,17 +1,17 @@
-package com.logistics.android;
+package com.logistics.android.user;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.logistics.android.BaseActivity;
+import com.logistics.android.R;
 import com.logistics.android.db.User;
-import com.logistics.android.util.ActivityCollector;
 
 import org.litepal.crud.DataSupport;
 
@@ -19,15 +19,16 @@ import java.util.List;
 
 public class RegisterActivity extends BaseActivity {
 
-    private EditText id;
-    private EditText password;
-    private EditText password2;
-    private EditText userName;
-    private EditText phone;
-    private EditText companyName;
-    private EditText companyAddress;
+    private EditText id; //账号
+    private EditText password; //密码
+    private EditText password2; //确认密码
+    private EditText userName; //用户姓名
+    private EditText phone; //联系电话
+    private EditText companyName; //公司名称
+    private EditText companyAddress; //公司地址
 
-    private Button okButton;
+    private Button okButton; //确认键
+    private Button backButton; //返回键
 
     private String id_v;
     private String password_v;
@@ -40,7 +41,7 @@ public class RegisterActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.register);
+        setContentView(R.layout.user_register);
         id = (EditText)findViewById(R.id.register_id);
         password = (EditText)findViewById(R.id.register_password);
         password2 = (EditText)findViewById(R.id.register_password2);
@@ -53,6 +54,10 @@ public class RegisterActivity extends BaseActivity {
 
     public void click(View view) {
         switch (view.getId()) {
+            case R.id.back_button:
+                Intent backIntent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(backIntent);
+                break;
             case R.id.ok_button:
                 id_v = id.getText().toString();
                 password_v = password.getText().toString();
@@ -98,7 +103,6 @@ public class RegisterActivity extends BaseActivity {
                 builder.setPositiveButton("好的", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        ActivityCollector.finishAll();
                         Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                         startActivity(intent);
                         finish();

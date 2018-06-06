@@ -8,17 +8,28 @@ import org.litepal.crud.DataSupport;
 
 public class Waybill extends DataSupport {
 
+    private int id; //编号
     private String goodsName; //货名
     private int goodsNumber; //件数
     private String consignor; //发货人
-    private String receiver; //收货人
+    private String reciever; //收货人
     private String consignor_phone; //发货人电话
-    private String receiver_phone; //收货人电话
+    private String reciever_phone; //收货人电话
     private String origin; //来源地
     private String destination; //目的地
     private double cost; //费用
-    private boolean cost_status; //0费用已付，1费用到付
+    private int cost_status; //支付状态，0费用已付，1费用到付
     private int status; //订单状态，0未发货，1已发货，2已到货，3已提货
+    private User user;
+    private Car car;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getGoodsName() {
         return goodsName;
@@ -44,12 +55,12 @@ public class Waybill extends DataSupport {
         this.consignor = consignor;
     }
 
-    public String getReceiver() {
-        return receiver;
+    public String getReciever() {
+        return reciever;
     }
 
-    public void setReceiver(String receiver) {
-        this.receiver = receiver;
+    public void setReciever(String reciever) {
+        this.reciever = reciever;
     }
 
     public String getConsignor_phone() {
@@ -60,12 +71,12 @@ public class Waybill extends DataSupport {
         this.consignor_phone = consignor_phone;
     }
 
-    public String getReceiver_phone() {
-        return receiver_phone;
+    public String getReciever_phone() {
+        return reciever_phone;
     }
 
-    public void setReceiver_phone(String receiver_phone) {
-        this.receiver_phone = receiver_phone;
+    public void setReciever_phone(String reciever_phone) {
+        this.reciever_phone = reciever_phone;
     }
 
     public String getOrigin() {
@@ -92,11 +103,11 @@ public class Waybill extends DataSupport {
         this.cost = cost;
     }
 
-    public boolean isCost_status() {
+    public int getCost_status() {
         return cost_status;
     }
 
-    public void setCost_status(boolean cost_status) {
+    public void setCost_status(int cost_status) {
         this.cost_status = cost_status;
     }
 
@@ -106,5 +117,21 @@ public class Waybill extends DataSupport {
 
     public void setStatus(int status) {
         this.status = status;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        this.car = car;
     }
 }

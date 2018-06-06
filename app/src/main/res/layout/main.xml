@@ -4,35 +4,90 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary">
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="移动物流管理系统"/>
+
+    </RelativeLayout>
+
     <Button
-        android:id="@+id/login_button"
-        android:layout_width="120dp"
+        android:id="@+id/recieve_button"
+        android:layout_width="320dp"
         android:layout_height="60dp"
-        android:layout_margin="16dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         android:background="@drawable/blue"
-        android:text="收货录入"
+        android:text="收货"
         android:textSize="20dp"
         android:textColor="@color/white"
         android:onClick="click"/>
 
     <Button
-        android:id="@+id/login_button"
-        android:layout_width="120dp"
+        android:id="@+id/send_button"
+        android:layout_width="320dp"
         android:layout_height="60dp"
-        android:layout_margin="16dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         android:background="@drawable/blue"
-        android:text="收货录入"
+        android:text="发运"
         android:textSize="20dp"
         android:textColor="@color/white"
         android:onClick="click"/>
 
     <Button
-        android:id="@+id/login_button"
-        android:layout_width="120dp"
+        android:id="@+id/reach_button"
+        android:layout_width="320dp"
         android:layout_height="60dp"
-        android:layout_margin="16dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         android:background="@drawable/blue"
-        android:text="收货录入"
+        android:text="到货"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:onClick="click"/>
+
+    <Button
+        android:id="@+id/take_button"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/blue"
+        android:text="提货"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:onClick="click"/>
+
+    <Button
+        android:id="@+id/allocate_button"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/blue"
+        android:text="配载"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:onClick="click"/>
+
+    <Button
+        android:id="@+id/setup_button"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/blue"
+        android:text="设置"
         android:textSize="20dp"
         android:textColor="@color/white"
         android:onClick="click"/>

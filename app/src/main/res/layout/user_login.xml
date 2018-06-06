@@ -4,12 +4,27 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary">
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="移到物流管理系统"/>
+    </RelativeLayout>
+
     <ImageView
         android:id="@+id/login_image"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="48dp"/>
+        android:layout_marginTop="48dp"
+        android:src="@drawable/item3_before"/>
 
     <EditText
         android:id="@+id/login_id"
@@ -46,15 +61,6 @@
             android:layout_height="32dp"
             android:layout_marginLeft="30dp"
             android:text="记住密码"
-            android:onClick="click"/>
-
-        <CheckBox
-            android:id="@+id/login_autologin"
-            android:layout_width="100dp"
-            android:layout_height="32dp"
-            android:layout_marginRight="30dp"
-            android:text="自动登录"
-            android:layout_alignParentEnd="true"
             android:onClick="click"/>
 
     </RelativeLayout>
